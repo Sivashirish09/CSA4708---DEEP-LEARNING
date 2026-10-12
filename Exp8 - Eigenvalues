@@ -1,0 +1,14 @@
+#  image-processing system uses the matrix below to analyze patterns in image features. 
+A =[ 4 2
+2 4 ] 
+Write a Python program to calculate the eigenvalues of the matrix and to display the 
+eigenvalues in a bar chart.
+
+
+
+
+
+import numpy as np
+
+A = np.array([[4,2],[2,4]])
+print(np.linalg.eigvals(A))
