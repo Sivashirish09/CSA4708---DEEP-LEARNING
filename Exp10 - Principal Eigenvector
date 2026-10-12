@@ -1,0 +1,22 @@
+# intelligent monitoring system collects measurements from two sensors. The covariance 
+matrix of the measurements is 
+C =[ 5 2
+2 2 ] 
+The system uses eigenvalue and eigenvector analysis to identify the principal direction of 
+variation in the sensor data. 
+Write a Python program using NumPy to calculate the eigenvalues and eigenvectors, identify 
+the eigenvector corresponding to the largest eigenvalue, and use Matplotlib to visualize both 
+eigenvectors as arrows on a two-dimensional graph.
+
+
+
+
+
+
+import numpy as np
+
+C = np.array([[5,2],[2,2]])
+v, V = np.linalg.eig(C)
+i = np.argmax(v)
+print("Largest eigenvalue:", v[i])
+print("Principal vector:", V[:,i])
