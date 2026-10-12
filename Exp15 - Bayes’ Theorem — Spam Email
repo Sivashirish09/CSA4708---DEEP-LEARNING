@@ -1,0 +1,18 @@
+#  email filtering system identifies 30% of incoming emails as spam. The word “prize” 
+appears in 70% of spam emails and in 10% of non-spam emails. 
+Write a Python program to apply Bayes’ theorem and calculate the probability that an email 
+is spam given that it contains the word “prize.” Use Matplotlib to visualize the prior 
+probability of spam and the posterior probability after observing the word.
+
+
+
+
+
+pS = 0.30
+pPrizeS = 0.70
+pPrizeN = 0.10
+
+p = (pS*pPrizeS) / (
+    pS*pPrizeS + (1-pS)*pPrizeN
+)
+print("Spam probability:", p)
