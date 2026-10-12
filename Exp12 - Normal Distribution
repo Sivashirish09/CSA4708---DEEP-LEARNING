@@ -1,0 +1,13 @@
+# lecturer observes that students’ examination marks approximately follow a normal 
+distribution with a mean of 70 and a standard deviation of 10. 
+Write a Python program to calculate the probability that a randomly selected student scores 
+between 60 and 80, and to plot the normal distribution with the interval highlighted.
+
+
+
+
+
+from scipy.stats import norm
+
+p = norm.cdf(80,70,10) - norm.cdf(60,70,10)
+print("Probability:", p)
