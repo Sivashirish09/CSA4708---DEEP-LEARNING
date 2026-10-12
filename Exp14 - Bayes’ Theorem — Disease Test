@@ -1,0 +1,19 @@
+#  disease affects 2% of a population. A medical test correctly identifies a person with the 
+disease 95% of the time. The test also produces a positive result for 5% of people who do not 
+have the disease. 
+Write a Python program to apply Bayes’ theorem and calculate the probability that a person 
+actually has the disease given that the test result is positive. Use Matplotlib to compare the 
+prior probability of having the disease with the posterior probability after a positive test 
+result.
+
+
+
+
+pD = 0.02
+sensitivity = 0.95
+false_positive = 0.05
+
+p = (pD*sensitivity) / (
+    pD*sensitivity + (1-pD)*false_positive
+)
+print("Posterior:", p)
