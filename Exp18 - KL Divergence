@@ -1,0 +1,15 @@
+#   Two language models predict the next word using the probability distributions 
+P=[0.5,0.3,0.2] and Q=[0.4,0.4,0.2]. A developer wants to measure how much the second 
+model's distribution differs from the first. 
+Write a Python program to calculate the KL divergence and to compare the two probability 
+distributions with a grouped bar chart.
+
+
+
+
+import numpy as np
+
+P = np.array([0.5,0.3,0.2])
+Q = np.array([0.4,0.4,0.2])
+D = np.sum(P*np.log(P/Q))
+print("KL Divergence:", D)
