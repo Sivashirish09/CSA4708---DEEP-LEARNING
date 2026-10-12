@@ -1,0 +1,19 @@
+#  neural network classifies an image into four categories. The actual class distribution is 
+Y=[0,1,0,0], and the predicted probability distribution is P=[0.1,0.6,0.2,0.1]. The developer 
+wants to evaluate the prediction error and compare the predicted distribution with the actual 
+distribution. 
+Write a Python program to calculate the cross-entropy loss and KL divergence between the 
+actual and predicted distributions, and to visualize the two distributions.
+
+
+
+
+import numpy as np
+
+Y = np.array([0,1,0,0])
+P = np.array([0.1,0.6,0.2,0.1])
+
+CE = -np.sum(Y*np.log(P))
+KL = np.sum(Y[Y>0]*np.log(Y[Y>0]/P[Y>0]))
+print("Cross entropy:", CE)
+print("KL divergence:", KL)
